@@ -35,9 +35,8 @@ export async function downloadImageFile(
     } catch (e) {} // ignore
   }
 
-  if (imageNodeId) {
-    clone.localFile___NODE = imageNodeId;
-  }
+  
+  clone.localFile___NODE = imageNodeId;
 
   return clone;
 }
