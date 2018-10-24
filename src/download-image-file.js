@@ -26,7 +26,6 @@ export async function downloadImageFile(
 
       if (imageNode) {
         imageNodeId = imageNode.id;
-        clone.localFile___NODE = imageNodeId;
 
         await cache.set(cacheKey, {
           imageNodeId,
@@ -35,6 +34,8 @@ export async function downloadImageFile(
       }
     } catch (e) {} // ignore
   }
+  
+  clone.localFile___NODE = imageNodeId;
 
   return clone;
 }
